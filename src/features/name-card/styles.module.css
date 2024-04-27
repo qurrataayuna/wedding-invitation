@@ -1,0 +1,15 @@
+.dark-blue-bg {
+  background-image: linear-gradient(to right, #1b263b, #4a68a1);
+  color: #e0e1dd;
+  padding: 16px;
+}
+
+.left-aligned {
+  border-radius: 4px 32px 4px 4px;
+  text-align: start;
+}
+
+.right-aligned {
+  border-radius: 32px 4px 4px 4px;
+  text-align: end;
+}

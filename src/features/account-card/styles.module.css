@@ -1,0 +1,20 @@
+.wrapper {
+  background-image: linear-gradient(to right, #778da9, #e0e1dd);
+  border-radius: 4px;
+  width: 100%;
+  padding: 12px;
+  margin-bottom: 16px;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.image {
+  width: 75px;
+  height: 75px;
+  border-radius: 4px;
+  background-color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
