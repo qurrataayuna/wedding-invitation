@@ -5,6 +5,7 @@ import SectionWrapper from "../section-wrapper";
 import NameCard from "../name-card";
 import EventCard from "../event-card";
 import AccountCard from "../account-card";
+import RSVP from "../rsvp";
 
 const HomePage = () => {
   const {
@@ -13,6 +14,7 @@ const HomePage = () => {
     quote,
     event_details: eventDetails,
     sign_of_affection: signOfAffection,
+    rsvp,
   } = t;
 
   return (
@@ -56,12 +58,30 @@ const HomePage = () => {
 
       <hr />
 
-      <SectionWrapper style="text-center" withMargin>
+      <SectionWrapper style="text-center pb-6" withMargin>
         <p className={clsx(pacifico.className, "text-base pt-16 pb-4")}>
           {signOfAffection.title}
         </p>
         <AccountCard account={signOfAffection.bride} image="/nagari.png" />
         <AccountCard account={signOfAffection.groom} image="/bri.png" />
+      </SectionWrapper>
+
+      <SectionWrapper style="text-center" withMargin>
+        <p className={clsx(pacifico.className, "text-base pb-4")}>
+          {rsvp.title}
+        </p>
+        <div className="flex space-around">
+          <RSVP
+            details={rsvp.bride}
+            name={brideGroom.bride_nickname}
+            cta={rsvp.cta}
+          />
+          <RSVP
+            details={rsvp.groom}
+            name={brideGroom.groom_nickname}
+            cta={rsvp.cta}
+          />
+        </div>
       </SectionWrapper>
     </div>
   );

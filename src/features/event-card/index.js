@@ -1,5 +1,4 @@
 import { pacifico, robotoSlab } from "@/utils/fonts";
-import { clsx } from "clsx";
 import styles from "./styles.module.css";
 
 const EventCard = ({ details }) => {

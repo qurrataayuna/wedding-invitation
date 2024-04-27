@@ -13,7 +13,7 @@ const NameCard = ({ leftAlign, rightAlign, name, parents }) => {
       )}
     >
       <p className={clsx(pacifico.className, "text-2xl pb-2")}>{name}</p>
-      <p>{parents}</p>
+      <p className="text-xs">{parents}</p>
     </div>
   );
 };
