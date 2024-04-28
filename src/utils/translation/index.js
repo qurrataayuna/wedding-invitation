@@ -51,4 +51,9 @@ export const invitationTranslation = {
     bride: "082389999601",
     groom: "085355676090",
   },
+  bottomsheet: {
+    wedding: "Pernikahan",
+    to: "Kepada Yth.",
+    cta: "Buka undangan",
+  },
 };

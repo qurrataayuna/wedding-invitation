@@ -43,6 +43,10 @@ hr {
   padding-bottom: 80px;
 }
 
+.pb-24 {
+  padding-bottom: 96px;
+}
+
 .space-around {
   justify-content: space-around;
 }

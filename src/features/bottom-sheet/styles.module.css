@@ -1,0 +1,25 @@
+.bottomsheet {
+  z-index: 1200;
+  width: 100%;
+  height: 100%;
+  background-image: linear-gradient(to bottom right, #415a78, #78a6de);
+  color: #e0e1dd;
+  position: fixed;
+  top: 0;
+  left: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.hidden {
+  display: none;
+}
+
+.button {
+  background-color: #e0e1dd;
+  border-radius: 4px;
+  color: #415a78;
+  padding: 8px 32px;
+}
