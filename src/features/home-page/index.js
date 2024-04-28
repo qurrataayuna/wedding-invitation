@@ -7,6 +7,7 @@ import EventCard from "../event-card";
 import AccountCard from "../account-card";
 import RSVP from "../rsvp";
 import BottomSheet from "../bottom-sheet";
+import { Suspense } from "react";
 
 const HomePage = () => {
   const {
@@ -19,7 +20,7 @@ const HomePage = () => {
   } = t;
 
   return (
-    <>
+    <Suspense>
       <div>
         <SectionWrapper style="text-center pb-16" withMargin>
           <p className="pb-6 italic">{greetings.opening_title}</p>
@@ -93,7 +94,7 @@ const HomePage = () => {
           date: `${eventDetails.day}, ${eventDetails.date}`,
         }}
       />
-    </>
+    </Suspense>
   );
 };
 
