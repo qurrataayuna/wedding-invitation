@@ -1,13 +1,14 @@
-import { pacifico, robotoSlab } from "@/utils/fonts";
+import { Suspense } from "react";
+import { robotoSlab } from "@/utils/fonts";
 import { invitationTranslation as t } from "@/utils/translation";
 import { clsx } from "clsx";
 import SectionWrapper from "../section-wrapper";
 import NameCard from "../name-card";
 import EventCard from "../event-card";
-import AccountCard from "../account-card";
-import RSVP from "../rsvp";
-import BottomSheet from "../bottom-sheet";
-import { Suspense } from "react";
+import OpeningBottomSheet from "../opening-bottom-sheet";
+import GiftSection from "./gift-section";
+import Image from "next/image";
+import RSVPSection from "./rsvp-section";
 
 const HomePage = () => {
   const {
@@ -15,19 +16,29 @@ const HomePage = () => {
     bride_and_groom: brideGroom,
     quote,
     event_details: eventDetails,
-    sign_of_affection: signOfAffection,
     rsvp,
   } = t;
 
   return (
     <Suspense>
       <div>
-        <SectionWrapper style="text-center pb-16" withMargin>
+        <div
+          style={{
+            display: "flex",
+            alignItems: "center",
+            justifyContent: "center",
+            paddingBottom: "40px",
+          }}
+        >
+          <Image src="/ornament1.png" height={35} width={150} alt="ornament" />
+        </div>
+
+        <SectionWrapper style="text-center pb-20" withMargin>
           <p className="pb-6 italic">{greetings.opening_title}</p>
           <p>{greetings.opening_description}</p>
         </SectionWrapper>
 
-        <SectionWrapper style="text-center pb-16" withMargin>
+        <SectionWrapper style="text-center pb-12" withMargin>
           <p className={clsx(robotoSlab.className, "font-medium pb-4")}>
             {brideGroom.title}
           </p>
@@ -43,11 +54,25 @@ const HomePage = () => {
           />
         </SectionWrapper>
 
-        <SectionWrapper style="text-center pb-20" withMargin>
-          <hr />
-          <p className="font-light italic pb-2 pt-6">{quote.context}</p>
+        <div
+          style={{
+            display: "flex",
+            alignItems: "center",
+            justifyContent: "center",
+            paddingBottom: "40px",
+          }}
+        >
+          <Image
+            src="/ornament-ring.png"
+            height={35}
+            width={60}
+            alt="ornament"
+          />
+        </div>
+
+        <SectionWrapper style="text-center pb-20 text-xs" withMargin>
+          <p className="font-light italic pb-4">{quote.context}</p>
           <p className="font-light italic pb-6">{quote.title}</p>
-          <hr />
         </SectionWrapper>
 
         <SectionWrapper style="text-center pb-16">
@@ -55,39 +80,35 @@ const HomePage = () => {
         </SectionWrapper>
 
         <SectionWrapper style="text-center pb-16" withMargin>
-          <p className="pb-6">{greetings.closing_description}</p>
-          <p className="italic">{greetings.closing_title}</p>
+          <p className="italic pb-6 font-light">{t.prayer.context}</p>
+          <p className="italic font-light">{t.prayer.title}</p>
         </SectionWrapper>
 
         <hr />
 
-        <SectionWrapper style="text-center pb-6" withMargin>
-          <p className={clsx(pacifico.className, "text-base pt-16 pb-4")}>
-            {signOfAffection.title}
-          </p>
-          <AccountCard account={signOfAffection.bride} image="/nagari.png" />
-          <AccountCard account={signOfAffection.groom} image="/bri.png" />
+        <GiftSection />
+        <RSVPSection />
+
+        <hr />
+
+        <SectionWrapper style="text-center pt-16 pb-16" withMargin>
+          <p className="pb-6">{greetings.closing_description}</p>
+          <p className="italic">{greetings.closing_title}</p>
         </SectionWrapper>
 
-        <SectionWrapper style="text-center" withMargin>
-          <p className={clsx(pacifico.className, "text-base pb-4")}>
-            {rsvp.title}
-          </p>
-          <div className="flex space-around">
-            <RSVP
-              details={rsvp.bride}
-              name={brideGroom.bride_nickname}
-              cta={rsvp.cta}
-            />
-            <RSVP
-              details={rsvp.groom}
-              name={brideGroom.groom_nickname}
-              cta={rsvp.cta}
-            />
-          </div>
-        </SectionWrapper>
+        <div
+          style={{
+            display: "flex",
+            alignItems: "center",
+            justifyContent: "center",
+            paddingBottom: "40px",
+          }}
+        >
+          <Image src="/ornament1.png" height={35} width={150} alt="ornament" />
+        </div>
       </div>
-      <BottomSheet
+
+      <OpeningBottomSheet
         data={{
           bride: brideGroom.bride_nickname,
           groom: brideGroom.groom_nickname,

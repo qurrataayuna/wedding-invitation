@@ -33,7 +33,11 @@ export const invitationTranslation = {
   },
   sign_of_affection: {
     title: "Tanda kasih",
-    cta: "Copy",
+    message1:
+      "Doa restu Bapak/Ibu/Saudara/i merupakan karunia yang sangat berharga bagi kami.",
+    message2:
+      "Apabila Bapak/Ibu/Saudara/i ingin memberikan hadiah dapat mengirimkannya melalui tautan berikut.",
+    cta: "Kirim Hadiah",
     bride: {
       bank_name: "Bank Nagari",
       bank_account: "0602 0210 05499 4",
@@ -47,6 +51,8 @@ export const invitationTranslation = {
   },
   rsvp: {
     title: "Kirim Ucapan dan Konfirmasi Kehadiran",
+    message:
+      "Kehadiran Bapak/Ibu/Saudara/i adalah hal yang sangat berharga bagi kami. Doa, ucapan, dan konfirmasi kehadiran dapat Bapak/Ibu/Saudara/i sampaikan melalui tautan berikut.",
     cta: "Kirim ucapan",
     bride: "082389999601",
     groom: "085355676090",
@@ -55,5 +61,14 @@ export const invitationTranslation = {
     wedding: "Pernikahan",
     to: "Kepada Yth.",
     cta: "Buka undangan",
+  },
+  cta: {
+    copy: "Copy",
+  },
+  bank_copied: "Account number copied to clipboard",
+  prayer: {
+    context:
+      "“Semoga Allah memberkahi di waktu bahagia dan memberkahimu di waktu susah, dan mengumpulkan kalian berdua dalam kebaikan.”",
+    title: "HR. Abu Daud",
   },
 };
