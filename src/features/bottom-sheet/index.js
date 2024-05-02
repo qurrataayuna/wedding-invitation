@@ -1,3 +1,6 @@
+import { robotoSlab } from "@/utils/fonts";
+import clsx from "clsx";
+
 const BottomSheet = ({ children, isOpen, handleClose }) => {
   if (!isOpen) return null;
 
@@ -27,6 +30,13 @@ const BottomSheet = ({ children, isOpen, handleClose }) => {
         }}
         className="text-center"
       >
+        <p
+          className={clsx(robotoSlab.className, "font-bold text-l")}
+          style={{ textAlign: "end", padding: "16px 32px 0 0" }}
+          onClick={() => handleClose()}
+        >
+          X
+        </p>
         {children}
       </div>
     </div>
